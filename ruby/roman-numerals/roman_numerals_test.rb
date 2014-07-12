@@ -70,12 +70,10 @@ class RomanTest < MiniTest::Test
   end
 
   def test_1024
-    skip
     assert_equal 'MXXIV', 1024.to_roman
   end
 
   def test_3000
-    skip
     assert_equal 'MMM', 3000.to_roman
   end
 
