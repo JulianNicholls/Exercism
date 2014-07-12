@@ -2,15 +2,15 @@
 
 class Squares
   def initialize( num )
-    @num = num
+    @list = 1..num
   end
 
   def sum_of_squares
-    (1..@num).reduce( 0 ) { |a, e| a + e * e }
+    @list.reduce( 0 ) { |a, e| a + e * e }
   end
 
   def square_of_sums
-    (1..@num).reduce( :+ ) ** 2
+    @list.reduce( :+ ) ** 2
   end
 
   def difference
