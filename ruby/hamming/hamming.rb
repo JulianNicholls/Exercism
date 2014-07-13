@@ -1,15 +1,8 @@
-# Hamming code class?
+# Hamming code class
 class Hamming
-  def self.compute( left, right )
-    return 0 if left == right
-
-    mutations = 0
-
-    left.each_char.with_index do |lc, idx|
-      break if idx == right.size
-      mutations += 1 if lc != right[idx]
+  def self.compute( left_str, right_str )
+    left_str.chars.zip( right_str.chars ).reduce( 0 ) do |a, (left, right)|
+      right && left != right ? a + 1 : a
     end
-
-    mutations
   end
 end
