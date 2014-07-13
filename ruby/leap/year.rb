@@ -1,7 +1,13 @@
-# I can't believe anyone would cheat on a task this simple...
+# Leap year determination class
 class Year
   def self.leap?( year )
-    year % 4 == 0 && leap_century?( year )
+    leap_year?( year )  && leap_century?( year )
+  end
+
+  private
+
+  def self.leap_year?( year )
+    year % 4 == 0
   end
 
   def self.leap_century?( year )

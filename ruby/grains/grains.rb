@@ -5,6 +5,6 @@ class Grains
   end
 
   def total
-    (1..64).reduce { |a, e| a + square( e ) }
+    (2 ** 64) - 1
   end
 end
